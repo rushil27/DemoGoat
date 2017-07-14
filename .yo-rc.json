@@ -1,0 +1,38 @@
+{
+  "generator-goatstack": {
+    "modules": [
+      "core",
+      "home",
+      "user-profile",
+      "404",
+      "shared"
+    ],
+    "subModules": {
+      "404": [],
+      "core": [],
+      "home": [],
+      "user-profile": [],
+      "shared": []
+    },
+    "newStoreImports": [],
+    "newStoreAttrs": [],
+    "newStoreReducers": [],
+    "routerImports": [],
+    "expressRouters": [],
+    "socketImports": [],
+    "socketRegisters": [],
+    "apptype": "starter-app",
+    "appname": "test",
+    "appdescription": "The Greatest of All Time Stack!",
+    "appkeywords": "redux, immutable, node, mongo, express, angular2, ng2, angular4, ng4, jasmine, karma, protractor, socketio, MEAN, webapp, Web Application",
+    "protocol": false,
+    "analytics": "",
+    "defaultDb": "mongo-db",
+    "dbFolders": [
+      "mongo-db"
+    ],
+    "databases": [
+      "MongoDB"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+<div #menu class="menu-container" [ngClass]="{'menuOpen': menuOpen, 'menu-mobile': !menuHide}">
+	<div class="router-links">
+		<!-- Sign up/in/out buttons -->
+		<button class="btn btn-primary" id="sign-out-btn" routerLink='/' [ngClass]="{'hidden': !(user$ | async).has('userItem')}" type="button" (click)="userActions.logout()">SIGN OUT</button>
+	</div>
+</div>
+<button class="nav-trigger btn btn-primary" *ngIf="!menuHide" [ngClass]="{'is-active': menuOpen}" (click)="openMenu()" type="button">
+	<span></span>
+</button>
+<button class="btn btn-primary" routerLink='/profile' routerLinkActive='active' id="welcome-user" *ngIf="(user$ | async).has('userItem')" [ngClass]="{'user-mobile': !menuHide}" color="accent">Welcome, {{(user$ | async).getIn(['userItem', 'username'])}}</button>

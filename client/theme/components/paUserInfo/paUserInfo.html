@@ -1,0 +1,10 @@
+<a class="profile-toggle-link dropdown-toggle user-block-header" id="user-profile-dd" data-toggle="dropdown" aria-expanded="false">
+      Hi, <span [innerHTML]="(user$ | async).getIn(['userItem', 'username'])"></span> <!-- {{ ( 'vstricker' | paUserInfo ) }} -->
+      </a>
+<ul class="dropdown-menu top-dropdown-menu profile-dropdown" aria-labelledby="user-profile-dd">
+  <li class="dropdown-item"><a href routerLink="/profile"><i class="fa fa-user"></i>Profile</a></li>
+  <li class="dropdown-item"><a href><i class="fa fa-cog"></i>Settings</a></li>
+  <li class="dropdown-item"><a href (click)="userActions.logout()" class="signout"><i class="fa fa-power-off"></i>Sign out</a></li>
+</ul>
+<!--<div class="user-block-header" id="org-name">Org: </div>
+      <div class="user-block-header" id="last-login">Login: </div>-->
